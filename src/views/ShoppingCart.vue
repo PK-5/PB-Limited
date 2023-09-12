@@ -71,8 +71,6 @@
  </script>
 
  <style>
- .pgbody{
-  background-color: purple;
- }
+
 
 </style>
