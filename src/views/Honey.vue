@@ -46,9 +46,7 @@
 </template>
 
 <style>
-template {
-  background-color: pink;
-}
+
 /* V-for product Card */
 
 .product-card-grid {

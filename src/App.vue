@@ -58,7 +58,7 @@
     <th id="contactus">Contact us</th>
   </tr>
   <tr>
-    <td id="webpages"><RouterLink to="/"> Home </RouterLink></td>
+    <td id="webpages"><RouterLink to="/"> About </RouterLink></td>
     <td id="contactus">Email: providencebismithltd@gmail.com</td>
     <td > <font-awesome-icon icon="fa-envelope" id="iconfooter"  /></td>
   </tr>
