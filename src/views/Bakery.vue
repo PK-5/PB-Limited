@@ -1,17 +1,12 @@
 <template>
+  
  
   <div id="pgbody">
  
      
- <div id="logo">
-     
+ <div >     
     
-     <div id="flex-container">
-       <div><img id="headerbake" src="@/components/headerbake.png" alt="logo" width="100%"> </div>
-       <div> <img id="logo" src="@/components/logobake.png" alt="logo" width="90%" ></div>
-       <div><img id="headerbake" src="@/components/headerbake.png" alt="logo" width="100%" ></div>
-     </div>
- 
+  <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
  </div>
  
  <RouterLink to="/shoppingCart"> <font-awesome-icon :icon="['fas', 'cart-shopping']" /></RouterLink>
@@ -69,10 +64,12 @@
    .name {
      font-weight: 500;
      font-size: 20px;
+    
    }
    
    .content {
      margin-top: 10px;
+     
    }
    
    .price {
@@ -81,30 +78,29 @@
    
    .addToCart {
      display: block;
-     background-image: linear-gradient(to right,#a6d3ee 0%, #f1c2fb 21%, #fbc2c2 100%);
+     background-color: #FFF9EF;
      margin-top: 10px;
      text-align: center;
-     color: white;
-     font-weight: 600;
+     color: #793D1A;
      text-decoration: none;
      padding: 5px 10px;
      border-radius: 5px;
+     font-family: tornac, sans-serif;
+     font-weight: 500;
+     font-style: normal;
+     font-size: 20px;
    }
  
    .addToCart:hover {
-     background-image: linear-gradient(to left,#a6d3ee 0%, #f1c2fb 21%, #fbc2c2 100%);
-     font-size: 18px;
+    background-color: #793D1A;
+    color: #FFF9EF;
    }
  
  
  
  /* Products */
  
- #logo{
-     text-align: center;
- 
- 
- }
+
  
  #flex-container {
      display: flex;

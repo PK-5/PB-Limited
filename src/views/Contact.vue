@@ -4,14 +4,10 @@
     
 <div >
     
-    <img id="logomain" src="@/components/logo.png" alt="logo" width="400px">
-  
+  <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
 
 </div>
 
-<h1 id="contact"> Contact </h1>
-
-<br>
 
 <hr id="middle">
 
@@ -99,6 +95,9 @@ Providence Bismith
 #contacticon{
     font-size: 30px;
     font-size: 2vw;
+}
+#middle{
+  background-color: #9E552A;
 }
 
 </style>

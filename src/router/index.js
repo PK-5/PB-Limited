@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Bakery from '../views/Bakery.vue'
-import Honey from '../views/Honey.vue'
 import Contact from '../views/Contact.vue'
 import ShoppingCart from '../views/ShoppingCart.vue'
 import Test from '../views/Test.vue'
@@ -20,11 +19,6 @@ const router = createRouter({
       path: '/bakery',
       name: 'bakery',
       component:Bakery
-    },
-    {
-      path: '/honey',
-      name: 'honey',
-      component:Honey
     },
     {
       path: '/contact',

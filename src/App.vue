@@ -1,4 +1,5 @@
 <template>
+ <link rel="stylesheet" href="https://use.typekit.net/rqq8spz.css">
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -17,10 +18,6 @@
 
       <a class="navbar-item">
         <RouterLink to="/bakery">Bakery</RouterLink>
-      </a>
-
-      <a class="navbar-item">
-        <RouterLink to="/honey">Honey</RouterLink>
       </a>
 
       <a class="navbar-item">
@@ -63,14 +60,9 @@
     <td > <font-awesome-icon icon="fa-envelope" id="iconfooter"  /></td>
   </tr>
   <tr>
-    <td id="webpages"><RouterLink to="/bakery"> Bakery </RouterLink></td>
+    <td id="webpages"><RouterLink to="/bakery"> Products </RouterLink></td>
     <td id="contactus">Phone:0212647276 </td>
     <td> <font-awesome-icon icon="fa-phone" id="iconfooter"  /></td>
-  </tr>
-  <tr>
-   <td id="webpages"><RouterLink to="/honey"> Honey </RouterLink></td>
-   <td id="contactus" >Whatsapp:0212647276 </td>
-   <td> <font-awesome-icon :icon="['fab', 'whatsapp']" id="iconfooter"  /></td>
   </tr>
   <tr>
     <td id="webpages"><RouterLink to="/contact"> Contact </RouterLink></td>
@@ -95,7 +87,19 @@
 
 /* Log out button colour */
 #logOutBtn{
-  background-color: rgb(135, 176, 236);
+  background-color: #FFF9EF;
+  color: #793D1A;
+  font-size: 20px;
+  font-family: tornac, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  
+}
+
+#logOutBtn:hover{
+  transition: 0.5s;
+  background-color:#793D1A ;
+  color:#FFF9EF;
   
 }
 
@@ -207,18 +211,20 @@
 
 nav {
   width: 100%;
-  font-size: 15px;
+  font-size: 60px;
+  font-family: storybook, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   text-align: center;
   margin-top: 2rem;
-  background-image: url(@/components/Splash.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10px;
+  background-image: url(@/components/bgrd.png);
+  padding: 5px;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: #9E552A
 }
+
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
@@ -228,6 +234,7 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  color: #000;
 }
 
 nav a:first-of-type {
@@ -237,16 +244,16 @@ nav a:first-of-type {
 /*Footer*/
 
 #footer{
-    background-image:url(@/components/Splash.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(@/components/bgrd.png);
     width: 100%;
     padding:2%;
+    
 }
 
 #links{
     width: 100%;
     text-align: justify;
+    
 }
 
 #iconfooter{
@@ -265,6 +272,7 @@ nav a:first-of-type {
 
 th {
   font-weight: bold;
+  
 }
 
 </style>
@@ -273,6 +281,7 @@ th {
 import { RouterLink, RouterView } from 'vue-router'
 import { onMounted, ref } from 'vue'
 import { useProducts} from '@/stores/products.js'
+import { useShoppingCart } from './stores/cart'
 import {useAuth} from '@/stores/Auth'
 
 /*
@@ -280,6 +289,7 @@ store
 */
 
 const Products = useProducts()
+const shoppingCart = useShoppingCart()
 const storeAuth =  useAuth()
 
 /*
@@ -289,6 +299,7 @@ mounted
 onMounted (() => {
 
   Products.getProducts(),
+  shoppingCart.getShoppingCart(),
   storeAuth.init()
 
 

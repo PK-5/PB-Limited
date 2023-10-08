@@ -6,10 +6,11 @@
     
 <div >
     
-    <img id="logomain" src='@/components/logo.png' alt="logo" >
+    <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
   
 
 </div>
+<br>
 
 <div id="intro">
 
@@ -19,7 +20,7 @@
 
     <th>
 
-    <h1 id="heading"> Who are we? </h1>
+    <h1 id="heading"> Our aim </h1>
     <p id="description"> 
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit at impedit totam est velit molestiae cumque similique. Quibusdam adipisci totam expedita atque nihil iste itaque laborum reprehenderit suscipit est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, delectus neque. Maxime, necessitatibus nam! Natus omnis alias aut eligendi quam, praesentium nihil nisi. Dignissimos ex beatae sapiente molestiae quia sequi?
       </p>
@@ -27,7 +28,7 @@
     </th>
 
     <th>
-      <img id="WAWI" src="@/components/WAW.jpg" >
+      <img id="aim" src="@/components/aim.jpg" >
 
     </th>
 
@@ -38,43 +39,16 @@
 
 
   </table>
-  <br> <br> <br> <br>
+  <br> <br> 
   <hr id="left">
-
-  <br><br> <br> <br>
-
-  <table id="info">
-
-    <tr id="HON">
-
-      <th>
-        <img id="Honeyimg" src="@/components/Honey.jpg" >
-
-      </th>
-
-      <th>
-        <h1 id="heading"> Honey  </h1>
-        <p id="description"> 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi, necessitatibus qui nostrum blanditiis at eos officia, recusandae quos suscipit provident, quia nemo. Corporis eveniet voluptatibus consectetur tempore, incidunt deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, voluptate sapiente beatae laboriosam adipisci architecto omnis quas iste, soluta cupiditate optio qui reprehenderit exercitationem tempora expedita repellat molestias velit asperiores!
-          </p>
-      
-
-      </th>
-
-    </tr>
-
-    </table>
-
-    <br> <br> <br> <br>
-    <hr id="right">
-    <br> <br> <br> <br>
+  <br><br>
 
     <table id="info">
 
     <tr id="BAKE">
 
       <th>
-        <h1 id="heading"> Bakery  </h1>
+        <h1 id="heading"> Our products  </h1>
         <p id="description"> 
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt autem. Vero quaerat voluptatum neque voluptatem tempora alias consectetur quis animi, dolor quidem, distinctio nesciunt. Vero nulla tempora totam quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente itaque possimus, quas animi saepe, vero ipsam eaque natus ipsum, dicta ex sed quidem. Molestias ea earum consectetur facere sapiente?
           </p>
@@ -83,7 +57,7 @@
 
       <th>
        
-        <img id="Bakeryimg" src="@/components/Bakery.jpg" >
+        <img id="aim" src="@/components/products.jpg" >
       
 
       </th>
@@ -106,6 +80,11 @@
 </template>
 
 <style>
+body{
+  background-color: #FFF9EF;
+}
+
+
 #info{
     width: 100%;
 }
@@ -122,6 +101,7 @@
 #description{
     font-weight: 100;
     font-size: 1.25vw;
+    padding-right: 10%;
  
 }
 
@@ -129,11 +109,14 @@
 
     width: 20%;
     float: right;
+   
 }
 
 #left{
 
     width: 20%;
+   background-color: #9E552A;
+    
 
 }
 
@@ -149,10 +132,13 @@
     height:60%;
 }
 
-#WAWI{
+#aim{
 
     width:70%;
+    padding-left: 20px;
     height:60%;
+    border-radius: 25%;
+   
 }
 
 #logomain{
