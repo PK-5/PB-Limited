@@ -13,13 +13,15 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faEnvelope, faPhone, faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faBars, faCartShopping, faTrash, faPlus, faMinus} from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 
 
+
+
 /* add icons to the library */
-library.add(faEnvelope, faPhone, faBars, faCartShopping, faWhatsapp, faFacebook)
+library.add(faEnvelope, faPhone, faBars, faCartShopping, faTrash,faWhatsapp, faFacebook, faPlus, faMinus)
 
 const pinia = createPinia()
 pinia.use(({ store }) => {

@@ -9,27 +9,28 @@
   <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
  </div>
  
- <RouterLink to="/shoppingCart"> <font-awesome-icon :icon="['fas', 'cart-shopping']" /></RouterLink>
- <RouterView />
+
  
- 
+ <h2 class="cartTitle"> Bakery </h2>
+
  <br>
  
  <hr id="middle">
  <br>
  
  <div class="product-card-grid">
-       <div
+       <div 
          class="product-card"
          v-for="product in storeProducts.products"
          :key="product.id"
+         :product = "product"
        >
          <img :src="product.img" alt="product image" class="product-image">
          <div class="name">{{ product.name }}</div>
          <div class="content">{{ product.description }}</div>
          <div class="price">{{ product.price }}</div>
          <footer>
-           <a href="#" class="addToCart">Add to Cart</a>
+           <a href="#" class="addToCart" @click="addToCart(product)">Add to Cart</a>
          </footer>
        </div>
      </div>
@@ -64,6 +65,7 @@
    .name {
      font-weight: 500;
      font-size: 20px;
+     color: #793D1A ;
     
    }
    
@@ -74,6 +76,9 @@
    
    .price {
      margin-top: 10px;
+     color: #793D1A ;
+     font-size: 130%;
+     font-weight: 500;
    }
    
    .addToCart {
@@ -127,7 +132,11 @@
    
    import {ref,onMounted} from 'vue'
    import { useProducts } from '@/stores/products.js'
+   import { useShoppingCart } from '@/stores/cart.js'
    import { RouterLink, RouterView } from 'vue-router'
+    import Swal from 'sweetalert2';
+   
+
    
    
    /*
@@ -141,10 +150,27 @@
    */
    
    const storeProducts = useProducts()
+   const storeShoppingCart = useShoppingCart()
    
-   /* Image */
+   /* cart */
    
-   
+    /* import uuid */
+
+
+  const selectedProduct = ref(null)
+
+   const addToCart = (product) => {
+    selectedProduct.value = product
+    storeShoppingCart.addProduct(selectedProduct.value)
+    Swal.fire({
+      title: 'product added to cart',
+      showConfirmButton: false,
+      timer: 1000,
+      position: 'bottom-end',
+})
+}
+
+
    
  
  

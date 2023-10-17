@@ -94,6 +94,7 @@ body{
 
     font-weight: 400;
     font-size: 2vw;
+    color: #793D1A ;
 
 
 }
@@ -102,6 +103,7 @@ body{
     font-weight: 100;
     font-size: 1.25vw;
     padding-right: 10%;
+    color: #9E552A;
  
 }
 

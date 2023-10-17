@@ -5,6 +5,7 @@ import Contact from '../views/Contact.vue'
 import ShoppingCart from '../views/ShoppingCart.vue'
 import Test from '../views/Test.vue'
 import Auth from '../views/Auth.vue'
+import {useAuth} from '@/stores/Auth'
 
 
 const router = createRouter({
@@ -43,6 +44,19 @@ const router = createRouter({
     
 
   ]
+})
+
+//navigation guards 
+
+router.beforeEach(async (to, from) => {
+  const storeAuth =  useAuth()
+  if (!storeAuth.user.id && to.name !== 'auth') {
+  return {name:'auth'}
+  }
+  if (storeAuth.user.id && to.name === 'auth'){
+    return false
+  }
+  
 })
 
 export default router

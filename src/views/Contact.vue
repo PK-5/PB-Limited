@@ -8,6 +8,9 @@
 
 </div>
 
+<h2 class="cartTitle"> Contact </h2>
+
+<br>
 
 <hr id="middle">
 
@@ -62,9 +65,7 @@ Providence Bismith
 
 <br><br>
 
-<hr id="middle">
 
-<br><br>
 
 </div>
 
@@ -72,7 +73,14 @@ Providence Bismith
 
 <style>
 
+#pgbody{
+  color: #9E552A;
+}
 
+#contacticon{
+  color: #793D1A ;
+
+}
 #contact{
     text-align: center;
     font-size: 50px ;
