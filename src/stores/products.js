@@ -17,6 +17,8 @@ state: () => ({
 
 
 actions:{
+
+  //gets products from the database using onsnapshot stores the properties in a variable which is pushed to an array which is then pushed to the array in the state which is then displayed in the bakery page
  
   async getProducts(){
 onSnapshot(collection(db, 'products'), (querySnapshot) => {

@@ -7,7 +7,7 @@ import Test from '../views/Test.vue'
 import Auth from '../views/Auth.vue'
 import {useAuth} from '@/stores/Auth'
 
-
+//routing 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

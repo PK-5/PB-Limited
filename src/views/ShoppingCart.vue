@@ -1,7 +1,7 @@
 <template>
    <link rel="stylesheet" href="https://use.typekit.net/rqq8spz.css">
-     <div id="pgbody">
-      <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
+     <div class="pgbody">
+      <img class="logomain" src='@/components/officalLogo.png' alt="logo" >
       
      
  <div>
@@ -31,7 +31,7 @@
          <div class="name-cart">{{ cart.name }}</div>
          <div class="price-cart">{{ cart.price }}</div>
          <br>
-         <div id="trash"><font-awesome-icon  icon="fa-solid fa-trash" @click="deleteProduct(cart)"/> </div>
+         <div class="trash"><font-awesome-icon  icon="fa-solid fa-trash" @click="deleteProduct(cart)"/> </div>
          <div class="quantity-cart"> <div class="counter">
          <font-awesome-icon
             :icon="['fas', 'minus']"
@@ -59,7 +59,7 @@
 
  <div v-if="!storeShoppingCart.cart.length">
 
-<h1 id="placeholder">no items added to your cart </h1>
+<h1 class="placeholder">no items added to your cart </h1>
 
 </div>
 
@@ -67,7 +67,7 @@
 
 
  </div>
- <div id="gap"></div>
+ <div class="gap"></div>
 
     
 </template>
@@ -80,11 +80,9 @@
    import { RouterLink, RouterView } from 'vue-router'
    import{useShoppingCart} from '@/stores/cart'
    import { ref } from 'vue'
-   /*
-   
-   store
 
-   */
+
+   /* production information for deleting a product */
 
    const productToDelete = ref(null)
 
@@ -95,6 +93,8 @@
     storeShoppingCart.deleteProduct(productToDelete.value.id)
 
 }
+
+/* production information to increase or decrease quantity */
   
 const product = ref(null)
 const downQuantity = (cart) => {
@@ -109,14 +109,7 @@ const upQuantity = (cart) => {
 
 }
 
-   
 
-  
-   
-   
-   
- 
- 
  </script>
 
  <style>
@@ -203,11 +196,11 @@ const upQuantity = (cart) => {
    
 
    /* other */
-   #gap{
+   .gap{
     padding-bottom: 20%;
    }
 
-   #trash{
+   .trash{
     float: right;
     vertical-align: middle;
     color: #793D1A;
@@ -215,7 +208,7 @@ const upQuantity = (cart) => {
 
    /*counter */
 
-   #placeholder{
+   .placeholder{
     color: #BB9C8A;
     font-size: 120%;
     text-align: center;

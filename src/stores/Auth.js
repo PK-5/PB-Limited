@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from '../js/firebase'
 import{useShoppingCart} from '@/stores/cart'
-
+import Swal from 'sweetalert2'
 
 export const useAuth = defineStore('Auth', {
 state: () => {
@@ -17,47 +17,51 @@ actions:{
   init(){
     const storeShoppingCart = useShoppingCart()
 
+    
+//checking if the user is logged in and if not sent to the authentication page
     onAuthStateChanged(auth, (user) => {
       if (user) {
         this.user.id= user.uid
         this.user.email = user.email
         this.router.push('/')
-        storeShoppingCart.getShoppingCart()
+        storeShoppingCart.getShoppingCart() //gets the cart information
       } else {
         this.user = {}
         this.router.replace('/auth')
-        storeShoppingCart.clearCart()
+        storeShoppingCart.clearCart() //clears the cart
       }
     })
   },
   
- 
+ //registering a user using authentication 
   registerUser(credentials){
     console.log('registerUser action',credentials)
     createUserWithEmailAndPassword(auth, credentials.email, credentials.password) 
     .then(async(userCredential) => {
     const user = userCredential.user
+    Swal.fire('You have succesfully registered') 
   }).catch((error) => {
     console.log('error.message:', error.message + error.code)
   })
 
   },
+  //logging in a user using authenticaiton
   loginUser(credentials){    
   signInWithEmailAndPassword(auth, credentials.email, credentials.password) .then((userCredential) => {
     const user = userCredential.user
-    //console.log('user:', user);
   })
   .catch((error) => {
-    //console.log(error.message);
+    console.log(error.message);
   });
 
   },
 
+  //logging out user using authentication 
+
   logoutUser(){
     signOut(auth).then(() => {
-      //console.log('User signed out');
     }).catch((error) => {
-      //console.log(error.message);
+      console.log(error.message);
     });
 
 

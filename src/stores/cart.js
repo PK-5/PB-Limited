@@ -15,7 +15,9 @@ export const useShoppingCart = defineStore('shoppingCart', {
      }
   },
   actions:{
-    
+
+    //getShopping cart function that takes a snapshot of the database annd stores the variable cartProduct in the cart array which is then pushed to the cart array in the state which is shown on the shopping cart page
+ 
     async getShoppingCart(){
       const storeAuth =  useAuth()
       onSnapshot(collection(db, 'users',storeAuth.user.id,'cart'), (querySnapshot) => {
@@ -34,16 +36,16 @@ export const useShoppingCart = defineStore('shoppingCart', {
 
 
 })
+
+//clears the cart 
     },
     clearCart() {
       this.cart = []
     },
   
-
+//adds a product to the cart, it is able to identify the product through the parameter that has been passed through, a unique id is produced and the product is added to the cart using  setDoc 
   async addProduct(selectedProduct){
     const storeAuth =  useAuth()
-    console.log('addProduct', selectedProduct)
-
     let addProduct = {
       id:uuidv4(),
       img: selectedProduct.img,
@@ -53,7 +55,6 @@ export const useShoppingCart = defineStore('shoppingCart', {
       
     }
 
-   // this.cart.unshift(addProduct)
 
 await setDoc(doc(db, 'users',storeAuth.user.id,'cart', addProduct.id), {
        img: selectedProduct.img,
@@ -64,10 +65,14 @@ await setDoc(doc(db, 'users',storeAuth.user.id,'cart', addProduct.id), {
 
   },
 
+  //deletes a product form the cart using deleteDoc
+
   async deleteProduct(productID){
     const storeAuth =  useAuth()
   await deleteDoc(doc(db, 'users',storeAuth.user.id,'cart', productID))
   },
+
+  //increases and decreases the quantity of a product in the cart using updateDoc
   
   async upQuantity(productID){
     const storeAuth =  useAuth()

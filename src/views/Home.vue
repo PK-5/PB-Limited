@@ -1,34 +1,34 @@
 <template>
   <br> <br> <br>
 
-  <div id="pgbody">
+  <div class="pgbody">
 
     
 <div >
     
-    <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
+    <img class="logomain" src='@/components/officalLogo.png' alt="logo" >
   
 
 </div>
 <br>
 
-<div id="intro">
+<div class="intro">
 
-<table id="info">
+<table class="info">
 
-  <tr id="WAWW">
+  <tr class="WAWW">
 
     <th>
 
-    <h1 id="heading"> Our aim </h1>
-    <p id="description"> 
+    <h1 class="heading"> Our aim </h1>
+    <p class="description"> 
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit at impedit totam est velit molestiae cumque similique. Quibusdam adipisci totam expedita atque nihil iste itaque laborum reprehenderit suscipit est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, delectus neque. Maxime, necessitatibus nam! Natus omnis alias aut eligendi quam, praesentium nihil nisi. Dignissimos ex beatae sapiente molestiae quia sequi?
       </p>
 
     </th>
 
     <th>
-      <img id="aim" src="@/components/aim.jpg" >
+      <img class="aim" src="@/components/aim.jpg" >
 
     </th>
 
@@ -40,16 +40,16 @@
 
   </table>
   <br> <br> 
-  <hr id="left">
+  <hr class="left">
   <br><br>
 
-    <table id="info">
+    <table class="info">
 
-    <tr id="BAKE">
+    <tr class="BAKE">
 
       <th>
-        <h1 id="heading"> Our products  </h1>
-        <p id="description"> 
+        <h1 class="heading"> Our products  </h1>
+        <p class="description"> 
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, deserunt autem. Vero quaerat voluptatum neque voluptatem tempora alias consectetur quis animi, dolor quidem, distinctio nesciunt. Vero nulla tempora totam quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente itaque possimus, quas animi saepe, vero ipsam eaque natus ipsum, dicta ex sed quidem. Molestias ea earum consectetur facere sapiente?
           </p>
 
@@ -57,7 +57,7 @@
 
       <th>
        
-        <img id="aim" src="@/components/products.jpg" >
+        <img class="aim" src="@/components/products.jpg" >
       
 
       </th>
@@ -85,12 +85,12 @@ body{
 }
 
 
-#info{
+.info{
     width: 100%;
 }
 
 
- #heading{
+ .heading{
 
     font-weight: 400;
     font-size: 2vw;
@@ -99,7 +99,7 @@ body{
 
 }
 
-#description{
+.description{
     font-weight: 100;
     font-size: 1.25vw;
     padding-right: 10%;
@@ -107,14 +107,14 @@ body{
  
 }
 
-#right {
+.right {
 
     width: 20%;
     float: right;
    
 }
 
-#left{
+.left{
 
     width: 20%;
    background-color: #9E552A;
@@ -122,19 +122,19 @@ body{
 
 }
 
-#Honeyimg{
+.Honeyimg{
 
     width:80%;
     height:60%;
 }
 
-#Bakeryimg{
+.Bakeryimg{
 
     width:70%;
     height:60%;
 }
 
-#aim{
+.aim{
 
     width:70%;
     padding-left: 20px;
@@ -143,7 +143,7 @@ body{
    
 }
 
-#logomain{
+.logomain{
     height: 30%;
     width: 30%;
     margin-left: 35%;

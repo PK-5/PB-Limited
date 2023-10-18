@@ -1,10 +1,10 @@
 <template>
-   <div id="pgbody">
+   <div class="pgbody">
 
     
 <div >
     
-  <img id="logomain" src='@/components/officalLogo.png' alt="logo" >
+  <img class="logomain" src='@/components/officalLogo.png' alt="logo" >
 
 </div>
 
@@ -12,15 +12,15 @@
 
 <br>
 
-<hr id="middle">
+<hr class="middle">
 
 <br><br>
 
-<table id="contacttable">
+<table class="contacttable">
 
 <tr>
-<td> <p id="contactinfo"> 
-<font-awesome-icon icon="fa-envelope"  id="contacticon" /><br>
+<td> <p  class="contactinfo"> 
+<font-awesome-icon icon="fa-envelope"  class="contacticon" /><br>
 <b>email:</b>
 <br>
 providencebismithltd@gmail.com
@@ -28,8 +28,8 @@ providencebismithltd@gmail.com
 </td>
 
 <td>
-<p id="contactinfo"> 
-  <font-awesome-icon icon="fa-phone"  id="contacticon" /><br>
+<p class="contactinfo"> 
+  <font-awesome-icon icon="fa-phone"  class="contacticon" /><br>
 <b>phone:</b>
 <br>
 0212647276 
@@ -40,8 +40,8 @@ providencebismithltd@gmail.com
 <tr>
 <td>
 <br>
-<p id="contactinfo"> 
-  <font-awesome-icon :icon="['fab', 'whatsapp']" id="contacticon"  /> <br>
+<p class="contactinfo"> 
+  <font-awesome-icon :icon="['fab', 'whatsapp']" class="contacticon"  /> <br>
 <b>whatsapp: </b> 
 <br>
 0212647276 
@@ -50,8 +50,8 @@ providencebismithltd@gmail.com
 
 <td>
 <br>
-<p id="contactinfo"> 
-  <font-awesome-icon :icon="['fab', 'facebook']" id="contacticon"  /> <br>
+<p class="contactinfo"> 
+  <font-awesome-icon :icon="['fab', 'facebook']" class="contacticon"  /> <br>
 <b>facebook: </b>
 <br>
 Providence Bismith 
@@ -73,21 +73,21 @@ Providence Bismith
 
 <style>
 
-#pgbody{
+.pgbody{
   color: #9E552A;
 }
 
-#contacticon{
+.contacticon{
   color: #793D1A ;
 
 }
-#contact{
+.contact{
     text-align: center;
     font-size: 50px ;
     font-size: 4vw ;
 }
 
-#contactinfo{
+.contactinfo{
     margin-left: 20%;
     font-weight: 100;
     font-size: 20px;
@@ -95,16 +95,16 @@ Providence Bismith
     text-align: center;
 }
 
-#contacttable{
+.contacttable{
     width: 80%;
     
 }
 
-#contacticon{
+.contacticon{
     font-size: 30px;
     font-size: 2vw;
 }
-#middle{
+.middle{
   background-color: #9E552A;
 }
 

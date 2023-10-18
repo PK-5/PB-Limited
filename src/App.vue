@@ -52,27 +52,27 @@
   <RouterView />
 
   
-<div id="footer"> 
+<div class="footer"> 
 
-<table id="links">
+<table class="links">
   <tr>
-    <th id="webpages">Webpages</th>
-    <th id="contactus">Contact us</th>
+    <th class="webpages">Webpages</th>
+    <th class="contactus">Contact us</th>
   </tr>
   <tr>
-    <td id="webpages"><RouterLink to="/"> About </RouterLink></td>
-    <td id="contactus">Email: providencebismithltd@gmail.com</td>
-    <td > <font-awesome-icon icon="fa-envelope" id="iconfooter"  /></td>
+    <td class="webpages"><RouterLink to="/"> About </RouterLink></td>
+    <td class="contactus">Email: providencebismithltd@gmail.com</td>
+    <td > <font-awesome-icon icon="fa-envelope" class="iconfooter"  /></td>
   </tr>
   <tr>
-    <td id="webpages"><RouterLink to="/bakery"> Products </RouterLink></td>
-    <td id="contactus">Phone:0212647276 </td>
-    <td> <font-awesome-icon icon="fa-phone" id="iconfooter"  /></td>
+    <td class="webpages"><RouterLink to="/bakery"> Products </RouterLink></td>
+    <td class="contactus">Phone:0212647276 </td>
+    <td> <font-awesome-icon icon="fa-phone" class="iconfooter"  /></td>
   </tr>
   <tr>
-    <td id="webpages"><RouterLink to="/contact"> Contact </RouterLink></td>
-    <td id="contactus" >Facebook: Providence Bismith</td>
-    <td> <font-awesome-icon :icon="['fab', 'facebook']" id="iconfooter"  /></td>
+    <td class="webpages"><RouterLink to="/contact"> Contact </RouterLink></td>
+    <td class="contactus" >Facebook: Providence Bismith</td>
+    <td> <font-awesome-icon :icon="['fab', 'facebook']" class="iconfooter"  /></td>
   </tr>
   <th></th>  
   
@@ -83,6 +83,36 @@
 </div> 
   
 </template>
+
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import { onMounted, ref } from 'vue'
+import { useProducts} from '@/stores/products.js'
+import { useShoppingCart } from './stores/cart'
+import {useAuth} from '@/stores/Auth'
+
+/*
+store
+*/
+
+const Products = useProducts()
+const shoppingCart = useShoppingCart()
+const storeAuth =  useAuth()
+
+/*
+mounted
+*/
+
+onMounted (() => {
+
+  Products.getProducts(),
+  shoppingCart.getShoppingCart(),
+  storeAuth.init()
+
+
+}) 
+
+</script>
 
 <style >
 /*import bulma */
@@ -176,7 +206,7 @@ nav a:first-of-type {
 
 /*Footer*/
 
-#footer{
+.footer{
     background-image: url(@/components/bgrd.png);
     width: 100%;
     padding:2%;
@@ -184,23 +214,23 @@ nav a:first-of-type {
     
 }
 
-#links{
+.links{
     width: 100%;
     text-align: justify;
     
 }
 
-#iconfooter{
+.iconfooter{
     font-size: 30px;
     font-size: 1.5vw;
 
 }
 
-#contactus{
+.contactus{
     padding-left: 40%;
 }
 
-#webpages{
+.webpages{
     padding-left: 5%;
 }
 
@@ -210,38 +240,3 @@ th {
 }
 
 </style>
-
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import { onMounted, ref } from 'vue'
-import { useProducts} from '@/stores/products.js'
-import { useShoppingCart } from './stores/cart'
-import {useAuth} from '@/stores/Auth'
-
-/*
-store
-*/
-
-const Products = useProducts()
-const shoppingCart = useShoppingCart()
-const storeAuth =  useAuth()
-
-/*
-mounted
-*/
-
-onMounted (() => {
-
-  Products.getProducts(),
-  shoppingCart.getShoppingCart(),
-  storeAuth.init()
-
-
-}) 
-
-
-
-
-
-
-</script>

@@ -99,7 +99,6 @@ const onSubmit = () => {
     else{
         if(register.value){
             storeAuth.registerUser(credentials)
-            Swal.fire('You have succesfully registed') 
         }
         else{
             storeAuth.loginUser(credentials)
