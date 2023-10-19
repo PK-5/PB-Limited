@@ -41,6 +41,7 @@ actions:{
     const user = userCredential.user
     Swal.fire('You have succesfully registered') 
   }).catch((error) => {
+    Swal.fire(error.message.value)
     console.log('error.message:', error.message + error.code)
   })
 
@@ -51,7 +52,8 @@ actions:{
     const user = userCredential.user
   })
   .catch((error) => {
-    console.log(error.message);
+    Swal.fire(error.message)
+    console.log(error.message)
   });
 
   },
@@ -61,7 +63,7 @@ actions:{
   logoutUser(){
     signOut(auth).then(() => {
     }).catch((error) => {
-      console.log(error.message);
+      console.log(error.message)
     });
 
 

@@ -91,7 +91,6 @@ body{
 
 
  .heading{
-
     font-weight: 400;
     font-size: 2vw;
     color: #793D1A ;

@@ -56,7 +56,7 @@ export const useShoppingCart = defineStore('shoppingCart', {
     }
 
 
-await setDoc(doc(db, 'users',storeAuth.user.id,'cart', addProduct.id), {
+await setDoc (doc(db, 'users',storeAuth.user.id,'cart', addProduct.id), {
        img: selectedProduct.img,
       name:selectedProduct.name,
       price: selectedProduct.price,
@@ -95,14 +95,3 @@ await updateDoc(doc(db, 'users',storeAuth.user.id,'cart', productID), {
   }
 
 })
-
-
-  /* async addProduct(){
-    await setDoc(doc(db, 'users',storeAuth.user.id,'cart', uuidv4), { 
-      img: newCartProduct.img ,
-      name: newCartProduct.name,
-      quantity: newCartProduct.quantity ,
-      price: newCartProduct.price
-    })
-  }
-  */ 
