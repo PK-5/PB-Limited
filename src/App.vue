@@ -106,8 +106,8 @@ mounted
 onMounted (() => {
 
   Products.getProducts(),
-  shoppingCart.getShoppingCart(),
-  storeAuth.init()
+  shoppingCart.getShoppingCart()
+ // storeAuth.init()
 
 
 }) 
