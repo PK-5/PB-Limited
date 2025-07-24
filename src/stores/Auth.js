@@ -27,7 +27,7 @@ actions:{
         storeShoppingCart.getShoppingCart() //gets the cart information
       } else {
         this.user = {}
-        this.router.replace('/auth')
+        this.router.replace('/home')//changed this to navigate through website 24/07
         storeShoppingCart.clearCart() //clears the cart
       }
     })
