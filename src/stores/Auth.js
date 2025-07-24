@@ -19,7 +19,7 @@ actions:{
 
     
 //checking if the user is logged in and if not sent to the authentication page
-    onAuthStateChanged(auth, (user) => {
+    /*onAuthStateChanged(auth, (user) => {
       if (user) {
         this.user.id= user.uid
         this.user.email = user.email
@@ -27,10 +27,10 @@ actions:{
         storeShoppingCart.getShoppingCart() //gets the cart information
       } else {
         this.user = {}
-        this.router.replace('/home')//changed this to navigate through website 24/07
+        this.router.replace('/auth')
         storeShoppingCart.clearCart() //clears the cart
       }
-    })
+    })*/
   },
   
  //registering a user using authentication 
