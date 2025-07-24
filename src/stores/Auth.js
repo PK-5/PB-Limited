@@ -19,7 +19,7 @@ actions:{
 
     
 //checking if the user is logged in and if not sent to the authentication page
-    /*onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
       if (user) {
         this.user.id= user.uid
         this.user.email = user.email
@@ -30,7 +30,7 @@ actions:{
         this.router.replace('/auth')
         storeShoppingCart.clearCart() //clears the cart
       }
-    })*/
+    })
   },
   
  //registering a user using authentication 
