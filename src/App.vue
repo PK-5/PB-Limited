@@ -13,7 +13,7 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item">
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">ome</RouterLink>
       </a>
 
       <a class="navbar-item">
